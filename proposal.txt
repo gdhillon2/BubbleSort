@@ -13,7 +13,7 @@ Output - 2347BCabc
 
 I will take the input string and break it up into two different strings.
 One will contain the numbers, and the other will contain the strings.
-I will separately sort these strings and then print them and write them to an output file together with the numbers first.
+I will separately sort these strings using a bubble sort and then print them and write them to an output file together with the numbers first.
 
 Functions:
 I will have one function that goes through the string and checks for anything that isn't a letter or number.
