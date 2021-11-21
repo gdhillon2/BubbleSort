@@ -22,7 +22,7 @@ r0 - user inputted string
 Outputs:
 r0 - 0 or 1 (will be used as a flag whether to continue or stop program)
 
-
+bubble_sort
 I will have another function that will take an input string and return a sorted version of it.
 Inputs:
 r0 - input string
