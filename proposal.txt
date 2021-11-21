@@ -41,7 +41,19 @@ If the user inputs a string containing punctuation/something containing not a le
 
 Sample Output:
 
+Please enter a string: 321CBAcba
 Sorted string: 123ABCabc
 
 Output.txt file contents:
 123ABCabc
+
+Sample Output #2 (not enough characters error):
+
+Please enter a string: 1
+Please enter two or more characters.
+Please enter a string:
+
+Sample Output #3 (punctuation error):
+
+Please enter a string: ;'.
+Punctuation must be removed before inputting string.
