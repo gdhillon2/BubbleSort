@@ -1,4 +1,5 @@
-Final Project Proposal
+Gurvir Dhillon
+Bubble Sorter
 
 Description:
 My final project proposal is a sorting algorithm that sorts numbers and letters from lowest to highest.
@@ -7,26 +8,40 @@ If there is punctuation in the string, the program will prompt the user to remov
 There will be 1 output string printed that has sorted the input string, putting numbers first then letters.
 The program will also create an output.txt file that contains the sorted string.
 
-Example input and output:
-Input - 74bc3BC2a
-Output - 2347BCabc
-
 I will take the input string and break it up into two different strings.
 One will contain the numbers, and the other will contain the strings.
 I will separately sort these strings using a bubble sort and then print them and write them to an output file together with the numbers first.
 
 Functions:
+
+string_check
 I will have one function that goes through the string and checks for anything that isn't a letter or number.
 If there isn't any, the code will continue but if there is the program will prompt the user to remove the punctuation and close the program.
-Inputs - User-Inputted String
-Output - Error Message/None
+Inputs:
+r0 - user inputted string
+Outputs:
+r0 - 0 or 1 (will be used as a flag whether to continue or stop program)
+
 
 I will have another function that will take an input string and return a sorted version of it.
-Inputs - String
-Output - Sorted String
+Inputs:
+r0 - input string
+Outputs:
+r0 - sorted string
 
-I will use the printf, fopen, fputs, and fclose functions from the C library.
+C Library Calls:
+printf - display output
+fopen - open output file
+fputs - write to output file
+fclose - close output file
 
 Error conditions:
 If the user inputs nothing or only 1 character, the program will prompt the user for a valid input.
 If the user inputs a string containing punctuation/something containing not a letter or number, the program will ask the user to remove them and close.
+
+Sample Output:
+
+Sorted string: 123ABCabc
+
+Output.txt file contents:
+123ABCabc
