@@ -1,0 +1,127 @@
+Gurvir Dhillon
+Bubble Sorter
+
+string_check.s
+Function that checks input string and makes sure there is no punctuation in it
+Source: Gurvir Dhillon
+
+Input
+R0 = address of input string
+Return
+R1 = 0 or 1
+	Output serves as a flag. 0 = punctuation in the string, 1 = no punctuation in the string
+
+# Iterate through string and check to make sure the ascii value of each character is within the bounds of letters/numbers
+
+int i = 0;
+
+while(i <= strlength(inputString))
+{
+	if( inputString[i] >= 48 && inputString[i] <= 57 )
+	{
+		r1 = 1;
+		i++;
+		restart while loop;
+	}
+
+	else if( inputString[i] >= 65 && inputString[i] <= 90 )
+	{
+		r1 = 1;
+		i++;
+		restart while loop;
+	}
+
+	else if( inputString[i] >= 97 && inputString[i] <= 122 )
+	{
+		r1 = 1;
+		i++;
+		restart while loop;
+	}
+	else
+	{
+		r1 = 0;
+		exit function to main program;
+	}
+}
+
+return r1;
+exit function to main program;
+
+bubble_sort.s
+Source: https://www.programiz.com/dsa/bubble-sort
+
+Input
+R0 = inputString
+Output
+R0 = sortedString
+
+// perform the bubble sort
+String bubbleSort(String array[], int size) {
+
+  // loop to access each array element
+  for (int step = 0; step < size - 1; ++step) {
+      
+    // loop to compare array elements
+    for (int i = 0; i < size - step - 1; ++i) {
+      
+      // compare two adjacent elements
+      // change > to < to sort in descending order
+      if (array[i] > array[i + 1]) {
+        
+        // swapping occurs if elements
+        // are not in the intended order
+        int temp = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+      }
+    }
+  }
+
+  return array[];
+}
+
+main.s
+Main function of program
+
+# Prompt user for a string containing letters and numbers
+printf("Please enter a string to sort: ");
+
+# Get input string from user
+scanf("%s", inputString);
+
+# Check to make sure inputString is more than 1 character and if not, re-prompt user for more characters
+if(strlength(inputString) < 1)
+{
+	printf("Please enter two or more characters.\n");
+	printf("Please enter a string: ");
+	scanf("%s", inputString);
+}
+
+# Loop above if statement until inputString > 1
+
+# Call string_check.s to check and make sure there is nothing other than letters and numbers in the string
+string_check(inputString);
+
+# If string_check returns a 0, print error message and exit program
+if( r1 = 0 )
+{
+	printf("Punctuation must be removed before inputting string.\n");
+	exit program;
+}
+
+# If string_check returns a 1, call bubble_sort.s and sort the string
+if (r1 = 1 )
+{
+	sortedString = bubble_sort(inputString);
+}
+
+# print sortedString and save it to an output.txt file
+printf("%s", sortedString);
+write sortedString to output.txt file;
+
+close program;
+
+
+
+
+
