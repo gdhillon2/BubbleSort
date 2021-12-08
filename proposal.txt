@@ -20,7 +20,7 @@ If there isn't any, the code will continue but if there is the program will prom
 Inputs:
 r0 - user inputted string
 Outputs:
-r0 - 0 or 1 (will be used as a flag whether to continue or stop program)
+If there is punctuation in the string, an error message will be displayed and the program will close. Otherwise, there is no output.
 
 bubble_sort
 I will have another function that will take an input string and return a sorted version of it.

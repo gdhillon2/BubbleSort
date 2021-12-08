@@ -7,9 +7,8 @@ Source: Gurvir Dhillon
 
 Input
 R0 = address of input string
-Return
-R1 = 0 or 1
-	Output serves as a flag. 0 = punctuation in the string, 1 = no punctuation in the string
+Output
+If message contains punctuation, function will output error message. If not, there will be no output
 
 # Iterate through string and check to make sure the ascii value of each character is within the bounds of letters/numbers
 
