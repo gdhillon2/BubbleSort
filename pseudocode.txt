@@ -44,7 +44,6 @@ while(i <= strlength(inputString))
 	}
 }
 
-return r1;
 exit function to main program;
 
 bubble_sort.s
