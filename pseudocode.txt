@@ -8,7 +8,7 @@ Source: Gurvir Dhillon
 Input
 R0 = address of input string
 Output
-If message contains punctuation, function will output error message. If not, there will be no output
+If message contains punctuation or spaces, function will output error message. If not, there will be no output
 
 # Iterate through string and check to make sure the ascii value of each character is within the bounds of letters/numbers
 
@@ -16,32 +16,35 @@ int i = 0;
 
 while(i <= strlength(inputString))
 {
+	if( inputString[i] == 32 )
+	{
+		print error message;
+		exit program;
+	
 	if( inputString[i] < 48 )
 	{
-		i++;
 		print error message;
-		restart while loop;
+		exit program;
 	}
 
 	else if( inputString[i] >= 58 && inputString[i] <= 64 )
 	{
-		i++;
 		print error message;
-		restart while loop;
+		exit program;
 	}
 
 	else if( inputString[i] >= 91 && inputString[i] <= 96 )
 	{
-		i++;
 		print error message;
-		restart while loop;
+		exit program;
 	}
 	else if( inputString[i] > 122 )
 	{
-		i++;
 		print error message;
-		restart while loop
+		exit program;
 	}
+	
+	i++;
 }
 
 exit function to main program;
@@ -61,7 +64,7 @@ String bubbleSort(String array[], int size) {
   for (int step = 0; step < size - 1; ++step) {
       
     // loop to compare array elements
-    for (int i = 0; i < size - step - 1; ++i) {
+    for (int i = 0; i < size - 1; ++i) {
       
       // compare two adjacent elements
       // change > to < to sort in descending order
