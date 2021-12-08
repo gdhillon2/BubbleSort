@@ -8,9 +8,7 @@ If there is punctuation in the string, the program will prompt the user to remov
 There will be 1 output string printed that has sorted the input string, putting numbers first then letters.
 The program will also create an output.txt file that contains the sorted string.
 
-I will take the input string and break it up into two different strings.
-One will contain the numbers, and the other will contain the strings.
-I will separately sort these strings using a bubble sort and then print them and write them to an output file together with the numbers first.
+I will take the input string and use bubble sort to sort through its ASCII values which will sort it numbers first, uppercase next, lowercase last.
 
 Functions:
 
@@ -41,7 +39,8 @@ If the user inputs a string containing punctuation/something containing not a le
 
 Sample Output:
 
-Please enter a string: 321CBAcba
+Please enter a string: 
+321CBAcba
 Sorted string: 123ABCabc
 
 Output.txt file contents:
@@ -49,11 +48,13 @@ Output.txt file contents:
 
 Sample Output #2 (not enough characters error):
 
-Please enter a string: 1
+Please enter a string: 
+1
 Please enter two or more characters.
 Please enter a string:
 
 Sample Output #3 (punctuation error):
 
-Please enter a string: ;'.
+Please enter a string: 
+;'.
 Punctuation must be removed before inputting string.
