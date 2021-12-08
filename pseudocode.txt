@@ -16,31 +16,37 @@ int i = 0;
 
 while(i <= strlength(inputString))
 {
+	if (i == 20 )
+	{
+		print character limit error message;
+		exit program;
+	}	
+	
 	if( inputString[i] == 32 )
 	{
-		print error message;
+		print punctuation/space error message;
 		exit program;
 	
 	if( inputString[i] < 48 )
 	{
-		print error message;
+		print punctuation/space error message;
 		exit program;
 	}
 
 	else if( inputString[i] >= 58 && inputString[i] <= 64 )
 	{
-		print error message;
+		print punctuation/space error message;
 		exit program;
 	}
 
 	else if( inputString[i] >= 91 && inputString[i] <= 96 )
 	{
-		print error message;
+		print punctuation/space error message;
 		exit program;
 	}
 	else if( inputString[i] > 122 )
 	{
-		print error message;
+		print punctuation/space error message;
 		exit program;
 	}
 	
