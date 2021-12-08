@@ -14,12 +14,13 @@ Functions:
 
 string_check
 I will have one function that goes through the string and checks for anything that isn't a letter or number.
-If there isn't any, the code will continue but if there is the program will prompt the user to remove the punctuation and close the program. It will also check to make sure that the max character limit of 19 characters is not exceeded.
+If there isn't any, the code will continue but if there is the program will prompt the user to remove the punctuation and close the program. 
+It will also check to make sure that the max character limit of 19 characters is not exceeded.
 It will print an error mesage if it is exceeded.
 Inputs:
 r0 - user inputted string
 Outputs:
-If there is punctuation in the string, an error message will be displayed and the program will close. Otherwise, there is no output.
+If there is punctuation or spaces in the input string, an error message will be displayed and the program will close. Otherwise, there is no output.
 If there are more than 19 characters (not including newline), it will print an error message.
 
 bubble_sort
@@ -38,6 +39,7 @@ fclose - close output file
 Error conditions:
 If the user inputs nothing or only 1 character, the program will prompt the user for a valid input.
 If the user inputs a string containing punctuation/something containing not a letter or number, the program will ask the user to remove them and close.
+If the user inputs too many characters an error will be printed.
 
 Sample Output:
 
