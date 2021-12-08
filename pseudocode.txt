@@ -16,30 +16,31 @@ int i = 0;
 
 while(i <= strlength(inputString))
 {
-	if( inputString[i] >= 48 && inputString[i] <= 57 )
+	if( inputString[i] < 48 )
 	{
-		r1 = 1;
 		i++;
+		print error message;
 		restart while loop;
 	}
 
-	else if( inputString[i] >= 65 && inputString[i] <= 90 )
+	else if( inputString[i] >= 58 && inputString[i] <= 64 )
 	{
-		r1 = 1;
 		i++;
+		print error message;
 		restart while loop;
 	}
 
-	else if( inputString[i] >= 97 && inputString[i] <= 122 )
+	else if( inputString[i] >= 91 && inputString[i] <= 96 )
 	{
-		r1 = 1;
 		i++;
+		print error message;
 		restart while loop;
 	}
-	else
+	else if( inputString[i] > 122 )
 	{
-		r1 = 0;
-		exit function to main program;
+		i++;
+		print error message;
+		restart while loop
 	}
 }
 
